@@ -102,13 +102,24 @@ for(let index = 0 ; index < cardViewButtons.length; index++){
 //Fonctionnalité 7 :
 
 let cards = document.querySelectorAll("div.row")[1];
-let btnArrow = document.querySelectorAll("a.my-2")[1];
+let secondBtnArrow = document.querySelectorAll("a.my-2")[1];
 
-btnArrow.addEventListener("click", function(){
+secondBtnArrow.addEventListener("click", function(){
     cards.insertBefore(cards.children[5],cards.children[0]);
 });
 
 //Fonctionnalité 8 :
+
+let firstBtnArrow = document.querySelectorAll("a.my-2")[0];
+firstBtnArrow.setAttribute("href","#");
+
+firstBtnArrow.addEventListener("click", function(){
+    cards.insertBefore(cards.children[0],cards.children[6]);
+});
+
+//Fonctionnalité 9 :
+
+
 
 
 
