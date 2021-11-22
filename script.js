@@ -67,7 +67,6 @@ let bootstrap = document.querySelector("link");
 let bootstrapStatus = true;
 
 
-
 navbar.addEventListener("dblclick", function(){
     if(bootstrapStatus === true){
      bootstrap.setAttribute("href","#"); 
@@ -78,3 +77,40 @@ navbar.addEventListener("dblclick", function(){
     };
         
 });
+
+//Fonctionnalité 6 :
+
+let cardViewButtons = document.querySelectorAll("button.btn-success");
+let cardTexts = document.querySelectorAll("p.card-text")
+let cardImgs = document.querySelectorAll("img.card-img-top")
+
+for(let index = 0 ; index < cardViewButtons.length; index++){  
+    cardViewButtons[index].addEventListener("mouseover",function(){
+        cardTexts[index].classList.toggle("collapse"); 
+        if(cardImgs[index].style.width === "20%" ){        
+            cardImgs[index].style.width = "100%";
+                        
+        }else{ 
+            cardImgs[index].style.width = "20%";
+            
+                                      
+
+        }
+    });
+};
+
+//Fonctionnalité 7 :
+
+let cards = document.querySelectorAll("div.row")[1];
+let btnArrow = document.querySelectorAll("a.my-2")[1];
+
+btnArrow.addEventListener("click", function(){
+    cards.insertBefore(cards.children[5],cards.children[0]);
+});
+
+//Fonctionnalité 8 :
+
+
+
+
+
